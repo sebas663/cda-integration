@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+					       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						   http://www.springframework.org/schema/context 
+						   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- Auto scan the components -->
+	<context:annotation-config />
+	<context:component-scan annotation-config="true" base-package="org.fleni.cda" />
+	
+	<bean id="log4jInitialization"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetClass" value="org.springframework.util.Log4jConfigurer" />
+		<property name="targetMethod" value="initLogging" />
+		<property name="arguments">
+			<list>
+				<value>src/main/resources/log4j/log4j.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Configuration Properties -->
+	<bean id="propertyPlaceholderConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="properties" ref="cda-int.properties" />
+		<property name="systemPropertiesModeName">
+			<value>SYSTEM_PROPERTIES_MODE_OVERRIDE</value>
+		</property>
+	</bean>
+	<bean id="cda-int.properties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:/properties/cda-commons.properties</value>
+				<value>classpath:/properties/cda-constants.properties</value>
+				<value>classpath:/properties/cda-connection.properties</value>
+			</list>
+		</property>
+	</bean>
+		
+	<import resource="classpath*:spring/configuration/dataaccess-application-context.xml" />
+	
+</beans>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<ClinicalDocument>
+	<!-- ** CDA Header ** -->
+	<realmCode code="AR"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- Plantilla General MAIS, y la fecha de la versión -->
+	<templateId root="2.16.840.1.113883.2.10.24.1.1.99" extension="2015-03-01"/>
+	<!-- Nota: El proximo templateID, codigo y titulo dependen del tipo especifico de documento
+		01-Epicrisis*** -->
+	<templateId root="2.16.840.1.113883.2.10.24.1.1.2" extension="2015-03-01"/>
+	<!--  Identificador único del documento 	-  MAIS_Ref:#D02-->
+	<id extension="1021781-1" root="2.16.840.1.113883.2.10.24.2.1.9999.1"/>
+	<!-- Clasificación del Documento 			-  MAIS_Ref:#D01 -->
+	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11502-2"
+		displayName="Informe Estudio Laboratorio"/>
+	<!-- Título -->
+	<title>Hospital Ejemplo: Informe Estudio Laboratorio</title>
+	<!-- Fecha de Creación del Documento 		-  MAIS_Ref:#D03 -->
+	<effectiveTime value="2013/03/19 13:08:51"/>
+	<!-- Código de Confidencialidad 			-  MAIS_Ref:#D04-->
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<!-- Código de Lenguaje: español de Argentina -->
+	<languageCode code="es-AR"/>
+	<!-- Identificador de Documento Original -->
+	<setId extension="2000000000589764" root="2.16.840.1.113883.2.10.24.2.1.4.2"/>
+	<!-- Versión del Documento -->
+	<versionNumber value="1"/>
+	<!-- Datos del Paciente -->
+	<recordTarget>
+		<patientRole>
+			<!-- Identificador del Paciente #1: Tipo y Número de Documento -  MAIS_Ref:#P07 -  MAIS_Ref:#P08-->
+			<id extension="20000000" root="2.16.840.1.113883.2.10.24.4.1"/>
+			<!-- Identificador del Paciente #2: Número de Historia Clínica Prestador -->
+			<id extension="29282" root="2.16.840.1.113883.2.10.24.2.1.9999.3"/>
+			
+			<id extension="44829" root="2.16.840.1.113883.2.10.24.2.1.4.3"/>
+			
+			<addr use="HP">
+				<!-- Domicilio del Paciente (Calle/Nro/Depto)  MAIS_Ref:#P09 -->
+				<streetAddressLine>Callao 2378</streetAddressLine>
+				<!-- Ciudad del Paciente 					   MAIS_Ref:#P10 -->
+				<city>Del Viso</city>
+				<!-- Provincia			 					   MAIS_Ref:#P13 -->
+				<state>Buenos Aires</state>
+				<!-- Codigo Postal			 				   MAIS_Ref:#P14 -->
+				<postalCode>1195</postalCode>
+				<!-- País					 				   MAIS_Ref:#P21 -->
+				<country>AR</country>
+				<!-- Partido					 			   MAIS_Ref:#P11 -->
+				<county>Pilar</county>
+				<!-- Departamento					 		   MAIS_Ref:#P12 -->
+				<additionalLocator>Del Viso</additionalLocator>
+			</addr>
+			<!-- Teléfono del Hogar del Paciente 			   MAIS_Ref:#P22-->
+			<telecom value="tel:(5411)4444-4444" use="HP"/>
+			<!-- Datos del Paciente -->
+			<patient>
+				<!-- Apellido y Nombres -->
+				<name use="L">
+					<!-- Primer Apellido			-  MAIS_Ref:#P01-->
+					<family>Funes</family>
+					<!-- Segundo Apellido			-  MAIS_Ref:#P02-->
+					<family>Gonzalez</family>
+					<!-- Primer Nombre				-  MAIS_Ref:#P03-->
+					<given>Alberto</given>
+					<!-- Segundo Nombre				-  MAIS_Ref:#P04-->
+					<given>José</given>
+				</name>
+				<!-- Sexo 							-  MAIS_Ref:#P05-->
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"
+					displayName="Femenino"/>
+				<!-- Fecha de Nacimiento 			-  MAIS_Ref:#P06-->
+				<birthTime value="20050501"/>
+			</patient>
+			<!-- Organización Prestadora -->
+			<providerOrganization>
+				<!-- Seccion 					    -  MAIS_Ref:#R06-->
+				<id root="2.16.840.1.113883.2.10.24.2.1.9999.5" extension="CAINT"/>
+				<name>GASTROENTEROLOGIA</name>
+				<!-- Sub-Especialidad				-  MAIS_Ref:#R08 -->
+				<standardIndustryClassCode code="23" displayName="CARDIOLOGIA INTERVENCIONISTA"
+					codeSystemName="2.16.840.1.113883.2.10.24.6"/>
+				<asOrganizationPartOf>
+					<!-- Departamento o Servicio 	-  MAIS_Ref:#R05-->
+					<id root="2.16.840.1.113883.2.10.24.2.1.9999.4" extension="CARD"/>
+					<!-- Especialidad 				-  MAIS_Ref:#R07-->
+					<code code="4" displayName="CARDIOLOGIA"
+						codeSystem="2.16.840.1.113883.2.10.24.5"/>
+					<wholeOrganization>
+						<!-- Organización -->
+						<id root="2.16.840.1.113883.2.10.24.2.1.9999"/>
+						<!-- Nombre de la Organización Prestadora			 -  MAIS_Ref:#R01 -->
+						<name>ORGANIZACION PRESTADORA DE PRUEBA </name>
+
+						<!-- Telefono de la Organización Prestadora 		 -  MAIS_Ref:#R04 -->
+						<telecom value="1149810000"/>
+						<addr>
+							<!-- Domicilio de la Organización Prestadora 	 -  MAIS_Ref:#R02 -->
+							<streetAddressLine>Corrientes 41000</streetAddressLine>
+							<!-- Localidad de la Organización Prestadora 	 -  MAIS_Ref:#R03 -->
+							<city>Buenos Aires</city>
+							<!-- Provincia de la Organización Prestadora 	 -  MAIS_Ref:#R09 -->
+							<state>C.A.B.A</state>
+							<!-- Codigo Postal de la Organización Prestadora -  MAIS_Ref:#R10 -->
+							<postalCode>1195</postalCode>
+						</addr>
+
+					</wholeOrganization>
+				</asOrganizationPartOf>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- Datos del Autor del Informe -->
+	<author>
+
+		<!-- Fecha de creación  / Idéntica a fecha de documento-->
+		<time value="201503171904+0300"/>
+
+		<assignedAuthor>
+			<!-- Tipo y Número de Matrícula del Bioquimico -   MAIS_Ref:#A07-->
+			<!-- Tipo y Número de Matrícula del Bioquimico -   MAIS_Ref:#A08-->
+
+			<id extension="99999" root="2.16.840.1.113883.2.10.24.7.1"/>
+			<!-- Código de Especialidad y Subespecialidad- MAIS_Ref:#A05-->
+			<!-- Código de Especialidad y Subespecialidad- MAIS_Ref:#A06-->
+
+			<code code="B" codeSystem="2.16.840.1.113883.2.10.24.5" displayName="Bioquimico"/>
+
+			<telecom use="WP" value="tel:555-555-1002"/>
+			<assignedPerson>
+				<name>
+					<!-- Primer Apellido del Autor  	-  MAIS_Ref:#A01-->
+					<family>Sanchez</family>
+					<!-- Segundo Apellido del Autor  	-  MAIS_Ref:#A02-->
+					<family>Balbín</family>
+					<!-- Primer Nombre del Autor  		-  MAIS_Ref:#A03-->
+					<given>Juan</given>
+					<!-- Segundo Nombre del Autor  		-  MAIS_Ref:#A04-->
+					<given>Marcos</given>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="2.16.840.1.113883.2.10.24.2.1.9999"/>
+
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- Numero de Afiliado y Cobertura -->
+	<participant typeCode="BEN">
+		<associatedEntity classCode="COVPTY">
+
+			<!-- Número de Afiliado		  		-  MAIS_Ref:#P19-->
+			<id extension="998991" root="2.16.840.1.113883.2.10.24.2.1.9999.7"/>
+			<!-- Apellido y Nombres del Titular -  MAIS_Ref:#P19-->
+			<associatedPerson>
+
+				<name> Funes Gonzalez Alberto Jose</name>
+
+			</associatedPerson>
+
+			<scopingOrganization>
+				<!-- Plan de Salud 				 -  MAIS_Ref:#P18 -->
+				<id root="2.16.840.1.113883.2.10.24.2.2.9999.6" extension="3010"/>
+				<name>PLAN DE SALUD HOSPITAL HOLANDES - PLAN 3010</name>
+				<asOrganizationPartOf>
+					<!-- Financiador 			 -  MAIS_Ref:#P17 -->
+					<id root="2.16.840.1.113883.2.10.24.2.2.9999"/>
+					<wholeOrganization>
+						<name> PLAN DE SALUD HOSPITAL HOLANDES </name>
+					</wholeOrganization>
+				</asOrganizationPartOf>
+			</scopingOrganization>
+
+		</associatedEntity>
+
+	</participant>
+	<!-- Medico Solicitante -->
+	<participant typeCode="REF">
+		<associatedEntity classCode="CAREGIVER">
+			<!-- Tipo y Número de Matrícula del Médico Solicitante-   MAIS_Ref:#E08-->
+			
+			<id extension="99999" root="2.16.840.1.113883.2.10.24.7.1"/>
+			<!-- Apellido y Nombres del Médico Solicitante-   MAIS_Ref:#E08-->
+			
+			<associatedPerson>
+				<name>
+					<!-- Primer Apellido del Autor  	-  MAIS_Ref:#A01-->
+					<family>Suarez</family>
+					<!-- Segundo Apellido del Autor  	-  MAIS_Ref:#A02-->
+					<family>Horomin</family>
+					<!-- Primer Nombre del Autor  		-  MAIS_Ref:#A03-->
+					<given>Monica</given>
+					<!-- Segundo Nombre del Autor  		-  MAIS_Ref:#A04-->
+					<given>Perla</given>
+				</name>
+				
+			</associatedPerson>
+			
+		</associatedEntity>
+		
+	</participant>
+	<inFulfillmentOf>
+		<order>
+			<!-- Identificador de la Orden -->
+			<id root="2.16.840.1.113883.2.10.24.10" extension="754436"/>
+			<!-- Tipo de Estudio Solicitado		-  MAIS_Ref:#E13 -->
+			<code codeSystem="2.16.840.1.113883.2.10.24.10" codeSystemName="LABORATORIO"
+				code="HEM" displayName="HEPATOGRAMA"/>
+
+		</order>
+	</inFulfillmentOf>
+	<!-- Datos del Estudio -->
+	<documentationOf typeCode="DOC">
+		<serviceEvent classCode="OBS">
+
+			<!-- Identificador del Estudio -->
+			<id root="2.16.840.1.113883.2.10.24.7" extension="784838"/>
+			<!-- Tipo de Estudio de AP		-  MAIS_Ref:#E13 -->
+			<code codeSystem="2.16.840.1.113883.2.10.24.10" codeSystemName="LABORATORIO"
+				code="H" displayName="HEPATOGRAMA"/>
+			<!-- Fecha de Realizacion								-  MAIS_Ref:#E11 -->
+
+			<effectiveTime>
+				<center value="20150120103000"/>
+			</effectiveTime>
+			<!-- Patologo										     -  MAIS_Ref:#E14 -->
+			<performer typeCode="PPRF">
+
+				<functionCode code="BIO" codeSystem="2.16.840.1.113883.2.10.24.7"
+					codeSystemName="PARTICIPACION ESTUDIOS" displayName="BIOQUIMICO"/>
+				<assignedEntity>
+					<!-- Aqui podria ir la matricula del bioquimico -->
+					<id/>
+					<assignedPerson>
+						<!-- Apellido y Nombre del Bioquimico -->
+						<name>
+							<family>SORLAN</family>
+							<given>MONICA</given>
+						</name>
+					</assignedPerson>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+
+	<componentOf>
+		<encompassingEncounter>
+			<!-- Identificador Único del Episodio 	-  MAIS_Ref:#E01 -->
+			<id extension="2016774" root="2.16.840.1.113883.2.10.24.2.1.4.8"/>
+			<!-- Tipo de Episodio				  	-  MAIS_Ref:#E02 -->
+			<code codeSystem="2.16.840.1.113883.2.10.24.9" code="E" displayName="EMERGENCIA"/>
+			
+			<effectiveTime>
+				<!-- Fecha de Ingreso 				-  MAIS_Ref:#E09 -->
+				<low value="201409091904+0500"/>
+			</effectiveTime>
+		</encompassingEncounter>
+		<!-- Cuerpo de CDA : Contenido Clinico -->
+	</componentOf>
+	<component>
+		<structuredBody>
+
+		
+			<!-- ******************************************************** INFORME LABORATORIO ************************************ -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.2.10.24.1.2.2" extension="2015-03-01"/>
+					<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="Informe de Laboratorio"/>
+					<title>INFORME</title>
+					<text>
+					<paragraph>
+						<content styleCode="Underline">QUIMICA</content>
+					</paragraph>
+					<paragraph>
+						HEPATOGRAMA
+					</paragraph>	
+						<table>
+							<thead>
+								<tr>
+									<th>ANALITO/METODO</th>
+									<th>RESULTADO</th>
+									<th>UNIDAD</th>
+									<th>REFERENCIA</th>
+							
+								</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+									<td>BILIRRUBINA TOTAL <br/>
+										Método: directo
+									</td>
+									<td>0,70</td>
+									<td>mg/dl</td>
+									<td>0,10-1,40</td>
+								</tr>
+								
+								<tr>
+									<td>BILIRRUBINA DIRECTA <br/>
+										Método: directo
+									</td>
+									<td>0,10</td>
+									<td>mg/dl</td>
+									<td>0,00-0,40</td>
+								</tr>
+								
+								<tr>
+									<td>FOSFATASAS ALCALINAS <br/>
+										Método: UV Cinético
+									</td>
+									<td>60</td>
+									<td>UI/L</td>
+									<td>31-100</td>
+								</tr>
+								<tr>
+									<td>GOT (ASAT) <br/>
+										Método: UV Cinético
+									</td>
+									<td>18</td>
+									<td>UI/L</td>
+									<td>10-42</td>
+								</tr>
+								<tr>
+									<td>GPT (ALAT) <br/>
+										Método: UV Cinético
+									</td>
+									<td>12</td>
+									<td>UI/L</td>
+									<td>10-40</td>
+								</tr>
+								<tr>
+									<td>COLESTEROL TOTAL<br/>
+										Método: Enzimático
+									</td>
+									<td>190</td>
+									<td>mg/dl</td>
+									<td>110-200</td>
+								</tr>
+								<tr>
+									<td>PROTEINAS TOTALES<br/>
+										Método: Biuret
+									</td>
+									<td>7.10</td>
+									<td>g/dL</td>
+									<td>6,30-7,80</td>
+								</tr>
+								<tr>
+									<td>ALBUMINA<br/>
+										Método: Colorimétrico / Verde de Bromocresol
+									</td>
+									<td>4,30</td>
+									<td>g/dL</td>
+									<td>3,20-5,00</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</text>
+				</section>
+			</component>
+		
+		</structuredBody>
+	</component>
+</ClinicalDocument>

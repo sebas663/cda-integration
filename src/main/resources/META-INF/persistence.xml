@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+	http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	
+	<persistence-unit name="cda-int" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>org.fleni.cda.externalreport.model.entity.ExternalReportData</class>
+		<class>org.fleni.cda.externalreport.model.entity.ExternalReportInfo</class>
+		<class>org.fleni.cda.externalreport.model.entity.ExternalReportType</class>
+		<class>org.fleni.cda.externalreport.model.entity.CdaErrorBackup</class>
+		
+		<class>org.fleni.cda.oid.model.entity.CodeSystem</class>
+		<class>org.fleni.cda.oid.model.entity.CodeSystemGroup</class>
+		<class>org.fleni.cda.oid.model.entity.ObjectIdentifier</class>
+		<class>org.fleni.cda.oid.model.entity.ObjectIdentifierGroup</class>
+		
+		<class>org.fleni.cda.oid.model.entity.ConvertMasterType</class>
+		<class>org.fleni.cda.oid.model.entity.SexType</class>
+		<class>org.fleni.cda.oid.model.entity.ConfidentialityType</class>
+		<class>org.fleni.cda.oid.model.entity.DocumentIdentityType</class>
+		<class>org.fleni.cda.oid.model.entity.DocumentTemplateType</class>
+		<class>org.fleni.cda.oid.model.entity.DocumentClassType</class>		
+		<class>org.fleni.cda.oid.model.entity.EpisodeScopeType</class>
+		<class>org.fleni.cda.oid.model.entity.EpisodeType</class>
+		<class>org.fleni.cda.oid.model.entity.FundersType</class>
+		<class>org.fleni.cda.oid.model.entity.IdentifierDocumentType</class>
+		<class>org.fleni.cda.oid.model.entity.MedicalMatriculationType</class>
+		<class>org.fleni.cda.oid.model.entity.ProvidersType</class>
+		<class>org.fleni.cda.oid.model.entity.SectionTemplateType</class>
+		<class>org.fleni.cda.oid.model.entity.SpecialtiesType</class>
+		<class>org.fleni.cda.oid.model.entity.SubSpecialtiesType</class>
+		
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+		<properties>
+			<property name="hibernate.default_batch_fetch_size" value="16" />
+			<property name="hibernate.default_schema" value="${jdbc.schema}" />
+			<property name="hibernate.max_fetch_depth" value="0" />
+			<property name="hibernate.dialect" value="${persistence.dialect}" />
+			<property name="hibernate.cache.use_minimal_puts" value="true" />
+			<property name="hibernate.cache.region.factory_class" value="net.sf.ehcache.hibernate.SingletonEhCacheRegionFactory" />
+			<property name="hibernate.cache.use_second_level_cache" value="true" />
+			<property name="hibernate.cache.use_query_cache" value="false" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.generate_statistics" value="false" />
+			<property name="hibernate.use_sql_comments" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.connection.defaultNChar">true</property>
+			<property name="hibernate.connection.CharSet">utf8</property>
+            <property name="hibernate.connection.characterEncoding">utf8</property>
+            <property name="hibernate.connection.useUnicode">true</property>
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed May 17 2017 16:22:56 GMT-0300 (Hora estándar de Argentina) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="ClinicalDocument">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="effectiveTime">
+                                 <xs:complexType>
+                                       <xs:attribute name="value" type="xs:int"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="setId">
+                                 <xs:complexType>
+                                       <xs:attribute name="root" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="extension" type="xs:int"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="recordTarget">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="patientRole">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="id" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="root" type="xs:string"></xs:attribute>
+                                                                           <xs:attribute name="extension" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="assigningAuthorityName" type="xs:string"></xs:attribute>
+                                                                           <xs:attribute name="displayable" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="patient">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="name">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="family" type="xs:string"></xs:element>
+                                                                                                   <xs:element name="given" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="administrativeGenderCode">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="code" type="xs:string"></xs:attribute>
+                                                                                             <xs:attribute name="codeSystem" type="xs:string"></xs:attribute>
+                                                                                             <xs:attribute name="codeSystemName" type="xs:string"></xs:attribute>
+                                                                                             <xs:attribute name="codeSystemVersion" type="xs:int"></xs:attribute>
+                                                                                             <xs:attribute name="displayName" type="xs:string"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="birthTime">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="value" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                           <xs:attribute name="classCode" type="xs:string"></xs:attribute>
+                                                                           <xs:attribute name="determinerCode" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                         <xs:attribute name="classCode" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                       <xs:attribute name="typeCode" type="xs:string"></xs:attribute>
+                                       <xs:attribute name="contextControlCode" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="componentOf">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="encompassingEncounter">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="id">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="extension" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="root" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="code">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="codeSystem" type="xs:string"></xs:attribute>
+                                                                           <xs:attribute name="code" type="xs:string"></xs:attribute>
+                                                                           <xs:attribute name="displayName" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="effectiveTime">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="value" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="encounterParticipant">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="assignedEntity">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="id">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:attribute name="nullFlavor" type="xs:string"></xs:attribute>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="code">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:attribute name="code" type="xs:string"></xs:attribute>
+                                                                                                               <xs:attribute name="codeSystemName" type="xs:string"></xs:attribute>
+                                                                                                               <xs:attribute name="displayName" type="xs:string"></xs:attribute>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                           <xs:attribute name="typeCode" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                         <xs:attribute name="classCode" type="xs:string"></xs:attribute>
+                                                         <xs:attribute name="moodCode" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                       <xs:attribute name="typeCode" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+<!--                      <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute> -->
+<!--                      <xs:attribute name="xmlns" type="xs:string"></xs:attribute> -->
+<!--                      <xs:attribute name="xmlns:mif" type="xs:string"></xs:attribute> -->
+<!--                      <xs:attribute name="xsi:schemaLocation" type="xs:string"></xs:attribute> -->
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
